@@ -27,7 +27,12 @@ function App() {
   if (!session) {
     return <SignInPage />;
   } else {
-    return <div>Logged in!</div>;
+    return (
+    <div>
+      Logged in!
+      <Tasks />
+    </div>
+    )
   }
 }
 
