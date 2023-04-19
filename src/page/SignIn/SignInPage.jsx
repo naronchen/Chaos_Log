@@ -35,8 +35,6 @@ function SignInPage() {
         console.log("Error signing up:", error.message);
       } else {
         console.log(user)
-        // Insert the username into the users table after successful sign up
-        await supabase.from("users").insert({ id: user.id, username });
         console.log("User signed up!");
       }
     } else {

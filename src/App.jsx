@@ -21,17 +21,17 @@ function App() {
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
     });
-
     return () => subscription.unsubscribe();
   }, []);
+
 
   if (!session) {
     return <SignInPage />;
   } else {
     return (
     <div>
-      Logged in!
-      <Tasks />
+      {/* Logged in as user ID: {session.user.id} */}
+      <Tasks userid = {session.user.id}/>
       <LogoutButton />
     </div>
     )

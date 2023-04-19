@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { supabase } from '../../client';
+import { useUser } from '../../hooks/useUser';
 import './NewTask.css';
 
 function NewTasks({ onSubmit }) {
+  const userId = useUser();
+
   const [formData, setFormData] = useState({
     color: "",
     content: "",
-    deadline: ""
+    deadline: "",
+    user_id: null
   });
   const [expanded, setExpanded] = useState(false); // State to track form expansion
-
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -23,8 +27,9 @@ function NewTasks({ onSubmit }) {
   
     const deadline = new Date(formData.deadline);
     const updatedDeadline = deadline.toISOString().slice(0, 16);
-    const updatedFormData = { ...formData, deadline: updatedDeadline };
-  
+
+    const updatedFormData = { ...formData, deadline: updatedDeadline, user_id: userId };
+    console.log(updatedFormData)
     await supabase.from('tasks').insert(updatedFormData).select();
     onSubmit(); 
     setExpanded(false); // Reset form expansion state
