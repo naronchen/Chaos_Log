@@ -1,0 +1,96 @@
+.input-like-h3 {
+    border: none;
+    background-color: transparent;
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 0;
+    outline: none;
+  }
+  
+  .task-page-container {
+    margin: 10px;
+  }
+  
+  .divider {
+    margin-bottom: 20px;
+  }
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox-label input[type="checkbox"] {
+    opacity: 0;
+
+  }
+  
+  .checkbox-custom {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    /* border: 2px solid #007bff; */
+    border-radius: 4px;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .checkbox-label-text {
+    font-size: 16px;
+    justify-content: center;
+    flex: 1;
+
+  }
+  
+  .checkbox-label:hover .checkbox-custom {
+    box-shadow: 0px 0px 10px rgba(204, 215, 227, 0.3);
+  }
+  
+  .checkbox-label input[type="checkbox"]:checked + .checkbox-custom:before {
+    content: "\2713";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: black;
+    text-align: center;
+  }
+  
+  .button-delete {
+    margin: 10px;
+    outline: none;
+    border: 1px solid lightcoral;
+    box-shadow: 0 0 10px lightcoral;
+  }
+
+  .button-delete:hover {
+    background-color: lightcoral; /* Set desired light red hover color */
+  }
+  
+  .button-update {
+    margin: 10px;
+    outline: none;
+    border: 1px solid lightcyan;
+    box-shadow: 0 0 10px lightcyan;
+  }
+
+  .button-update:hover {
+    background-color: lightskyblue; /* Set desired light red hover color */
+  }
+  
+  
+  textarea {
+    border: none;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    width: 300px;
+    height: 100px;
+    /* margin:20px; */
+  }
+  

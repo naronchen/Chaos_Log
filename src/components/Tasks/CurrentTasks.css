@@ -1,0 +1,59 @@
+
+.task-sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    /* outline: auto; */
+    width: 100%;
+    gap: 95px;
+}
+
+/* for some reason middle one is being squeezed */
+
+/* .task-sections li { */
+    
+    /* flex: 1; */
+    /* margin-right: 16px; Add margin between child sections */
+/* } */
+
+/* .the-section {
+    margin: 0 80px;
+} */
+
+.task-card {
+    background-color: #e0e0e0; /* Use a default lighter background color */
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px 00;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    text-decoration: none; /* Remove default underline for links */
+    transition: background-color 0.3s ease; /* Add transition effect for hover */
+    border-left: 4px solid #ddd; /* Add left border with a default color */
+}
+
+.task-card:hover {
+    background-color: #f0f0f0; /* Lighten the background color on hover */
+}
+
+.task-content {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.task-deadline {
+    color: gray;
+    font-weight: normal;
+}
+
+
+.first-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+

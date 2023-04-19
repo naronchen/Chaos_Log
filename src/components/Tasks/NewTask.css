@@ -1,0 +1,63 @@
+#new-task-form {
+    /* Add styles for the form element */
+    display: flex; /* Add flex display for aligning form items to left */
+    flex-direction: column; /* Set flex-direction to column for vertical alignment */
+    /* outline: auto; */
+}
+
+#new-task-form label {
+    /* Add styles for the labels */
+    border: none; /* Remove border */
+    display: block; /* Display labels as block elements for left-alignment */
+    margin-bottom: 10px; /* Add margin for spacing between labels */
+
+    /* text-align: left; Align text to left */
+  }
+  
+  #new-task-form select {
+    /* Add styles for the input and select elements */
+    width: 70%; /* Set width to 100% to fill the parent container */
+    padding: 5px; /* Add padding for spacing */
+    margin-bottom: 10px; /* Add margin for spacing between inputs */
+    margin-left: 40px;
+
+  }
+
+  #new-task-form input[type="datetime-local"]{
+    width: 70%;
+    margin-bottom: 10px; /* Add margin for spacing between inputs */
+    margin-left: 10px;
+    padding: 5px; /* Add padding for spacing */
+
+  }
+
+  #new-task-form input[type="text"]{
+    width: 70%; /* Set width to 100% to fill the parent container */
+    margin-left: 10px;
+    padding: 5px; /* Add padding for spacing */
+
+  }
+
+
+  .btn-class{
+    align-self: center;
+  }
+  #submit-btn {
+    /* Add styles for the submit button */
+    width: 92px; /* Set width to 100% to fill the parent container */
+    padding: 10px; /* Add padding for spacing */
+    margin: 0px 5px;
+  }
+
+  #submit-btn:hover {
+    background-color: lightsteelblue;
+  }
+
+  
+  .expand-btn:hover {
+    background-color: lightseagreen;
+  }
+  
+  .expand-btn:focus {
+    outline: none;
+  }

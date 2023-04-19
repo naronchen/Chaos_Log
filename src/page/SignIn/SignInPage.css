@@ -1,0 +1,79 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    background: none;
+    padding: 5px;
+    font-size: 16px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+    width: 250px;
+    margin-top: 5px;
+  }
+
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="text"]:focus {
+    outline: none;
+  }
+  
+  
+  
+  button[type="submit"] {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+
+    background: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  
+  
+  p {
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 400;
+  }
+  
+  button {
+    border: white;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
+  
+  button:hover {
+    color: blueviolet
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    background: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
