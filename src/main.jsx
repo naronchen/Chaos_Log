@@ -11,7 +11,7 @@ import SignInPage from './page/SignIn/SignInPage';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      
+        <Route index={true} path="/" element={<SignInPage />} />
         <Route index={true} path="/signin" element={<SignInPage />} />
         <Route index={true} path="/main" element={<App />} />
         <Route index={false} path="/task/:taskid" element={<TaskPage />} />
