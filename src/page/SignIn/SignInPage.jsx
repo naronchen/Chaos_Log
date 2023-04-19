@@ -69,7 +69,7 @@ function SignInPage() {
 
   return (
     <div>
-      <h1>Chaos Log</h1>
+      <h1 className="gradient">Chaos Log</h1>
       <form onSubmit={handleSubmit}>
         {isSigningUp && (
           <label>

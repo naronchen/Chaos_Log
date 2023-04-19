@@ -5,6 +5,7 @@ import { createClient } from '@supabase/supabase-js'
 import { Auth } from '@supabase/auth-ui-react'
 import SignInPage  from './page/SignIn/SignInPage'
 import { supabase } from './client'
+import LogoutButton from './components/LogoutButton'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
     <div>
       Logged in!
       <Tasks />
+      <LogoutButton />
     </div>
     )
   }
