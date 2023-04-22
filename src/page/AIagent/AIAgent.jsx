@@ -34,13 +34,13 @@ const AIAgent = () => {
         }
       );
 
-      console.log(response)
+      // console.log(response)
       const { data } = response;
       const originalString = data.choices[0].text;
       const stringWithoutFirstPart = originalString.replace(/^[^]*?(?=\d+\. )/, '');
       const bulletPoints = stringWithoutFirstPart.split(/(?:\n{1,2})?(?=\d+\. )/).filter((item) => item.trim() !== '');
 
-      console.log(bulletPoints)
+      // console.log(bulletPoints)
       setOpenAIResponse(bulletPoints);
 
     } catch (error) {

@@ -7,7 +7,7 @@ import { supabase } from '../client';
 
 
 
-function Navbar({ children }) {
+function Navbar() {
     const handleLogout = async () => {
         await supabase.auth.signOut();
       };
@@ -19,6 +19,9 @@ function Navbar({ children }) {
         </li>
         <li>
             <Link to="/agent">AI Agent</Link>
+        </li>
+        <li>
+            <Link to="/habit">Atomic Habits</Link>
         </li>
         <li>
             <Link onClick={handleLogout} to="/">LogOut</Link>

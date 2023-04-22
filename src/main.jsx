@@ -6,6 +6,7 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import TaskPage from './page/TaskPage/TaskPage';
 import AIAgent from './page/AIagent/AIAgent';
+import HabitPage from './page/HabitPage/HabitPage';
 import PrivateRoute from './PrivateRoute';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -25,6 +26,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         element={
           <PrivateRoute>
             <AIAgent />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/habit"
+        element={
+          <PrivateRoute>
+            <HabitPage />
           </PrivateRoute>
         }
       />

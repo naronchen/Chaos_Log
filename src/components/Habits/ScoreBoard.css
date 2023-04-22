@@ -1,0 +1,35 @@
+.scoreboard-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+  }
+  
+  .scoreboard-input input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    /* border-radius: 4px; */
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+  }
+  
+  
+  .scoreboard-input select {
+    flex: 0 0 60px;
+    padding: 10px;
+    /* border-radius: 4px; */
+    font-size: 16px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+
+  }
+  
+
+  .scoreboard-input select:focus {
+    outline: none;
+  }
