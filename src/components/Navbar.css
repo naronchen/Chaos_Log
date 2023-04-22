@@ -2,6 +2,8 @@
 .navbar {
     /* Add the font-family rule */
     font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
     position: fixed;
     top: 0;
     left: 0;
@@ -22,6 +24,11 @@
     padding: 0;
     margin: 0;
     width: 100%;
+    height: 100%; /* Add this to make the ul element take up the remaining space */
+    display: flex; /* Change the display property to flex */
+    flex-direction: column; /* Set the direction to column */
+    justify-content: center; /* Add this to spread the items evenly */
+    gap: 40px;
   }
   
   .navbar li {

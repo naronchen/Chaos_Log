@@ -18,9 +18,6 @@ function Navbar({ children }) {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/tasks">Tasks</Link>
-        </li>
-        <li>
             <Link to="/agent">AI Agent</Link>
         </li>
         <li>

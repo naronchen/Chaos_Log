@@ -15,4 +15,17 @@
       opacity: 1;
     }
   }
+
+  .objective-input {
+    margin-bottom: 30px;
+    font-size: 20px; /* Change the font-size value to your desired size */
+    border: none; /* Remove the border */
+    border-bottom: 1px solid white; /* Add underline */
+    outline: none; /* Remove the default outline */
+    background-color: transparent; /* Make the background transparent */
+  }
+  
+  .objective-input:focus {
+    outline: none; /* Remove the blue outline when focused */
+  }
   

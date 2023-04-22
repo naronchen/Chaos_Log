@@ -5,19 +5,19 @@ import Navbar from '../../components/Navbar';
 
 import MainContainer from '../../components/MainContainer';
 
-
 const AIAgent = () => {
   const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
-  const prompt =
-    'Provide a numbered list of actionable steps to end world hunger';
   const maxTokens = 80;
 
-  // const data = "\n\n1. All people should have access to food.\n\n2. No one should go hungry."
+  const [objective, setObjective] = useState('');
   const [openAIResponse, setOpenAIResponse] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   async function fetchOpenAIResponse() {
     try {
+      const prompt =
+        `Provide a numbered list of actionable steps to achieve ${objective}`;
+
       setIsLoading(true);
       const response = await axios.post(
         'https://api.openai.com/v1/engines/text-davinci-002/completions',
@@ -36,7 +36,9 @@ const AIAgent = () => {
 
       console.log(response)
       const { data } = response;
-      const bulletPoints = data.choices[0].text.split("\n\n").filter((item) => item.trim() !== '');
+      const originalString = data.choices[0].text;
+      const stringWithoutFirstPart = originalString.replace(/^[^\n]*\n\n/, '');
+      const bulletPoints = stringWithoutFirstPart.split("\n\n").filter((item) => item.trim() !== '');
       setOpenAIResponse(bulletPoints);
 
     } catch (error) {
@@ -46,10 +48,24 @@ const AIAgent = () => {
     }
   }
 
+  const handleObjectiveChange = (event) => {
+    setObjective(event.target.value.slice(0, 30));
+  };
 
   return (
     <MainContainer>
       <Navbar />
+      <div>
+        <label htmlFor="objective">Objective: </label>
+        <input
+          type="text"
+          id="objective"
+          value={objective}
+          onChange={handleObjectiveChange}
+          maxLength={30}
+          className="objective-input"
+        />
+      </div>
       <button onClick={fetchOpenAIResponse}>Fetch OpenAI Response</button>
       {isLoading && <p>Loading...</p>}
       {openAIResponse.length > 0 && (
