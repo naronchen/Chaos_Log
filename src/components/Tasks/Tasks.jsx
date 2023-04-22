@@ -3,7 +3,7 @@ import CurrentTasks from "./CurrentTasks";
 import { useState, useEffect } from "react";
 
 
-function Tasks({userid}) {
+function Tasks() {
     const [currentTasks, setCurrentTasks] = useState([]);
 
     const handleNewTaskSubmit = (newTask) => {

@@ -29,9 +29,9 @@ function App() {
     return <SignInPage />;
   } else {
     return (
-    <div>
+    <div style={{width: "100%"}}>
       {/* Logged in as user ID: {session.user.id} */}
-      <Tasks userid = {session.user.id}/>
+      <Tasks/>
       <LogoutButton />
     </div>
     )

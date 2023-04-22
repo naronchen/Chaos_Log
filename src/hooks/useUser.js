@@ -10,8 +10,8 @@ export function useUser() {
       const {
         data: { session },
       } = await supabase.auth.getSession();
-      const { user } = session;
-      setUserId(user.id);
+      const user = session ? session.user : null;
+      setUserId(user ? user.id : null);
     }
 
     fetchSession();

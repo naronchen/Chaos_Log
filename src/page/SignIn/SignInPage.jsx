@@ -70,41 +70,44 @@ function SignInPage() {
       <h1 className="gradient">Chaos Log</h1>
       <form onSubmit={handleSubmit}>
         {isSigningUp && (
-          <label>
+          <label  className="gradient-label">
             <input
               type="text"
               placeholder="username"
               value={username}
+              className="gradient-input"
               onChange={handleUsernameChange}
               required
             />
           </label>
         )}
-        <label>
+        <label className="gradient-label">
           <input
             type="email"
+            className="gradient-input"
             placeholder="email"
             value={email}
             onChange={handleEmailChange}
             required
           />
         </label>
-        <label>
+        <label  className="gradient-label">
           <input
             placeholder="password"
+            className="gradient-input"
             type="password"
             value={password}
             onChange={handlePasswordChange}
             required
           />
         </label>
-        <button type="submit">{isSigningUp ? "Sign Up" : "Sign In"}</button>
+        <button className="submit" type="submit">{isSigningUp ? "Sign Up" : "Sign In"}</button>
       </form>
       <p>
         {isSigningUp
           ? "Already have an account?"
           : "Don't have an account?"}{" "}
-        <button onClick={toggleSignInUp}>
+        <button className="submit"  onClick={toggleSignInUp}>
           {isSigningUp ? "Sign In" : "Sign Up"}
         </button>
       </p>

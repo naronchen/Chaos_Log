@@ -84,7 +84,9 @@ function CurrentTasks() {
             <div className = "first-line">
               <NewTasks onSubmit={fetchTasks}/>
               <TaskData tasks={tasks}/>
-              <button className="expand-btn" onClick={handleNewDay}> New Day</button>   
+              <div className="newday-container">
+                <button className="expand-btn" onClick={handleNewDay}> New Day</button>   
+              </div>
             </div>
             <div className="task-sections">
                 <div className="the-section">

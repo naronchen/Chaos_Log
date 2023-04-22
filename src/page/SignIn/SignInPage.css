@@ -5,16 +5,14 @@ form {
     margin-top: 20px;
   }
   
-  label {
+  .gradient-label {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     font-size: 18px;
   }
   
-  input[type="email"],
-  input[type="password"],
-  input[type="text"] {
+  .gradient-input {
     background: none;
     padding: 5px;
     font-size: 16px;
@@ -55,7 +53,7 @@ form {
     font-weight: 400;
   }
   
-  button {
+  .submit {
     border: white;
     cursor: pointer;
     text-decoration: none;
@@ -65,11 +63,11 @@ form {
     
   }
   
-  button:hover {
+  .submit:hover {
     color: blueviolet
   }
   
-  h1 {
+  .gradient {
     font-size: 28px;
     margin-bottom: 20px;
     background: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
