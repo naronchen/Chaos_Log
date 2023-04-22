@@ -1,0 +1,55 @@
+/* Navbar.css */
+.navbar {
+    /* Add the font-family rule */
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 180px; /* Adjust width as desired */
+    background-color: #333; /* Change background color as desired */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  /* ...rest of the CSS rules... */
+  
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .navbar li {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar li a:hover {
+    background-color: #111; /* Change hover background color as desired */
+  }
+  
+  .navbar > div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns the content to the bottom */
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px; /* Add some padding at the bottom */
+  }
+  

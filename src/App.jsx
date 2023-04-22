@@ -30,9 +30,7 @@ function App() {
   } else {
     return (
     <div style={{width: "100%"}}>
-      {/* Logged in as user ID: {session.user.id} */}
       <Tasks/>
-      <LogoutButton />
     </div>
     )
   }

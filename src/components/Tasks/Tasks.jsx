@@ -1,6 +1,9 @@
 import NewTasks from "./NewTask";
 import CurrentTasks from "./CurrentTasks";
 import { useState, useEffect } from "react";
+import Navbar from '../Navbar'
+
+import MainContainer from "../MainContainer";
 
 
 function Tasks() {
@@ -10,10 +13,10 @@ function Tasks() {
       setCurrentTasks([...currentTasks, newTask]);
     }
     return (
-        <div> 
-            {/* <NewTasks onSubmit = {handleNewTaskSubmit}/> */}
+        <MainContainer>
+            <Navbar />
             <CurrentTasks currentTasks = {currentTasks}/>
-        </div>
+        </MainContainer>
        
     )
 }

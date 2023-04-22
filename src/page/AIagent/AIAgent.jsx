@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './AIAgent.css';
+import Navbar from '../../components/Navbar';
+
+import MainContainer from '../../components/MainContainer';
+
 
 const AIAgent = () => {
   const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
@@ -44,7 +48,8 @@ const AIAgent = () => {
 
 
   return (
-    <div>
+    <MainContainer>
+      <Navbar />
       <button onClick={fetchOpenAIResponse}>Fetch OpenAI Response</button>
       {isLoading && <p>Loading...</p>}
       {openAIResponse.length > 0 && (
@@ -54,7 +59,7 @@ const AIAgent = () => {
           ))}
         </div>
       )}
-    </div>
+    </MainContainer>
   );
 };
 
