@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./ScoreBoard.css"
 import { useUser } from "../../hooks/useUser"
 import { supabase } from "../../client"
@@ -26,53 +26,86 @@ function ScoreBoard(){
         updatedHabits[e.target.id].value = e.target.value;
         setHabits(updatedHabits);
         };
+
+    async function submitHabits(userId, habits) {
+        // Check if the user already has a habit record
+        if (!userId) {
+            return;
+        }
+        const { data: habitData, error } = await supabase
+            .from("habits")
+            .select("*")
+            .eq("user_id", userId);
+        
+        if (error) {
+            console.error(error);
+            return;
+        }
+        
+        // If the user has a habit record, update it
+        if (habitData.length === 1) {
+            console.log("updating habit record");
+            const { data, error } = await supabase
+            .from("habits")
+            .update({ habits })
+            .eq("user_id", userId);
+        
+            if (error) {
+            console.error(error);
+            return;
+            }
+        
+            console.log("updated habit record:", data);
+        }
+        // If the user does not have a habit record, create a new one
+        else {
+            console.log("creating new habit record");
+            const { data, error } = await supabase
+            .from("habits")
+            .insert({ user_id: userId, habits });
+        
+            if (error) {
+            console.error(error);
+            return;
+            }
+            console.log("Created new habit record:", data);
+        }
+        }
     
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(habits);
 
-        // Check if the user already has a habit record
-        const { data: habitData, error } = await supabase
-            .from("habits")
-            .select("*")
-            .eq("user_id", userId)
-
-        if (error) {
-            console.error(error);
-            return;
-        }
-        console.log('habitData: ', habitData);
-        // If the user has a habit record, update it
-        if (habitData.length === 1) {
-            console.log("updating habit record")
-            const { data, error } = await supabase
-                .from("habits")
-                .update({ habits })
-                .eq("user_id", userId);
-
-            if (error) {
-                console.error(error);
-                return;
-            }
-
-            console.log("updated habit record:", data);
-        }
-        // If the user does not have a habit record, create a new one
-        else {
-            console.log("creating new habit record")
-            const { data, error } = await supabase
-                .from("habits")
-                .insert({ user_id: userId, habits });
-
-            if (error) {
-                console.error(error);
-                return;
-            }
-
-            console.log("Created new habit record:", data);
-        }
+        await submitHabits(userId, habits);
     };
     
+    useEffect(() => {
+        const fetchHabits = async () => {
+          if (!userId) {
+            return;
+          }
+          const { data, error } = await supabase
+            .from("habits")
+            .select("*")
+            .eq("user_id", userId);
+          if (error) {
+            console.error(error);
+            return;
+          }
+          if (data.length > 0) {
+            setHabits(data[0].habits);
+          }
+        };
+        fetchHabits();
+
+      }, [userId]);
+      
+      useEffect(() => {
+
+        return () => {
+          submitHabits(userId, habits);
+        };
+      }, [userId, habits]);
 
     return (
         <div className="scoreboard">
