@@ -38,7 +38,7 @@ function TaskData({ tasks }) {
     datasets: [
       {
         data: data,
-        backgroundColor: backgroundColors // Use the backgroundColors array to map colors
+        backgroundColor: backgroundColors 
       }
     ]
   };
