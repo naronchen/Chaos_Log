@@ -34,7 +34,7 @@ function SignInPage() {
       if (error) {
         console.log("Error signing up:", error.message);
       } else {
-        console.log(user)
+        // console.log(user)
         console.log("User signed up!");
       }
     } else {

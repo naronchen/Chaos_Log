@@ -15,7 +15,7 @@ function CurrentTasks() {
       if (error) { console.log(error)} 
       else { 
           
-          console.log("data:", data)
+          // console.log("data:", data)
           setTasks(data)}
   }
 
@@ -67,15 +67,15 @@ function CurrentTasks() {
 
       const handleNewDay = async () => {
         // delete everything finished: true
-        console.log("new day")
+        // console.log("new day")
         const { data, error } = await supabase.from('tasks')
                                               .delete()
                                               .match({finished: true})
-        console.log("newday finished")
+        // console.log("newday finished")
         if (error) { console.log(error)}
         else { 
           fetchTasks()
-          console.log("data:", data)}
+          // console.log("data:", data)}
       }
 
 

@@ -16,7 +16,7 @@ const AIAgent = () => {
   async function fetchOpenAIResponse() {
     try {
       const prompt =
-        `Provide a numbered list of actionable steps to achieve ${objective}`;
+        `Provide a numbered list of actionable steps to achieve ${objective}, 80 token`;
 
       setIsLoading(true);
       const response = await axios.post(
@@ -37,8 +37,10 @@ const AIAgent = () => {
       console.log(response)
       const { data } = response;
       const originalString = data.choices[0].text;
-      const stringWithoutFirstPart = originalString.replace(/^[^\n]*\n\n/, '');
-      const bulletPoints = stringWithoutFirstPart.split("\n\n").filter((item) => item.trim() !== '');
+      const stringWithoutFirstPart = originalString.replace(/^[^]*?(?=\d+\. )/, '');
+      const bulletPoints = stringWithoutFirstPart.split(/(?:\n{1,2})?(?=\d+\. )/).filter((item) => item.trim() !== '');
+
+      console.log(bulletPoints)
       setOpenAIResponse(bulletPoints);
 
     } catch (error) {
@@ -66,7 +68,7 @@ const AIAgent = () => {
           className="objective-input"
         />
       </div>
-      <button onClick={fetchOpenAIResponse}>Fetch OpenAI Response</button>
+      <button onClick={fetchOpenAIResponse}>Get Action Points</button>
       {isLoading && <p>Loading...</p>}
       {openAIResponse.length > 0 && (
         <div className="bullet-points">

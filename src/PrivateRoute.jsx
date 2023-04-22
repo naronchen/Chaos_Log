@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
   useEffect(() => {
     const checkAuthentication = async () => {
       const user = supabase.auth.getSession();
-      console.log('user: ', user);
+      // console.log('user: ', user);
 
       if ((await user).data.session) {
         setIsAuthenticated(true);
