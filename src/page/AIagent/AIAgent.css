@@ -29,3 +29,9 @@
     outline: none; /* Remove the blue outline when focused */
   }
   
+  .agent-btn{
+    background: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    outline: solid 1px white;
+  }

@@ -71,7 +71,7 @@ function CurrentTasks() {
         const { data, error } = await supabase.from('tasks')
                                               .delete()
                                               .match({finished: true})
-        console.log("newday finished")
+        // console.log("newday finished")
         if (error) { console.log(error)}
         else { 
           fetchTasks()

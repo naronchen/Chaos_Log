@@ -68,7 +68,7 @@ const AIAgent = () => {
           className="objective-input"
         />
       </div>
-      <button onClick={fetchOpenAIResponse}>Get Action Points</button>
+      <button className='agent-btn' onClick={fetchOpenAIResponse}>Get Action Points</button>
       {isLoading && <p>Loading...</p>}
       {openAIResponse.length > 0 && (
         <div className="bullet-points">

@@ -1,9 +1,13 @@
+.scoreboard__body{
+    width: 100%;
+}
 .scoreboard-input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 5px;
   }
   
   .scoreboard-input input {
@@ -32,4 +36,36 @@
 
   .scoreboard-input select:focus {
     outline: none;
+  }
+
+  .scoreboard-delete {
+    cursor: pointer;
+    margin-left: 20px;
+
+  }
+  .scoreboard-delete:hover {
+    color: lightcoral;
+  }
+
+  .scoreboard-btn{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    /* gap: 20px; */
+  }
+
+.scoreboard-btn button{
+    background: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    outline: solid 1px white;
+}
+
+
+  .checkbox-row{
+    text-align: left;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }

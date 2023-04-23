@@ -9,7 +9,7 @@ function HabitPage(){
         <div>
             <Navbar />
             <MainContainer>
-                <h1>Habit Page</h1>
+                {/* <h1>Habit Page</h1> */}
                 <ScoreBoard />
             </MainContainer>
         </div>

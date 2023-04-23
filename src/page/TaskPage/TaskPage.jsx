@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom'
 import {supabase} from '../../client'
 import {useEffect, useState, useRef} from 'react'
 import './TaskPage.css'
+import Navbar from '../../components/Navbar'
+import MainContainer from '../../components/MainContainer'
 
 function TaskPage() {
     // here I update the task
@@ -104,6 +106,9 @@ function TaskPage() {
     
 
     return (
+      <div>
+      <Navbar />
+      <MainContainer>
       <div className="task-page-container">
         <h2>Task Page 🚀</h2>
         <hr className="divider" />
@@ -157,6 +162,8 @@ function TaskPage() {
         <button onClick={deleteTask} className="button-delete">
           Delete Task
         </button>
+      </div>
+      </MainContainer>
       </div>
     )
   

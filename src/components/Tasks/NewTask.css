@@ -52,14 +52,16 @@
     margin: 0px 5px;
   }
 
-  #submit-btn:hover {
-    background-color: lightsteelblue;
-  }
+  /* #submit-btn:hover {
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    color: black;
+    } */
 
   
-  .expand-btn:hover {
-    background-color: lightseagreen;
-  }
+  /* .expand-btn:focus {
+    outline: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);
+  } */
+
   .newday-container{
     width: 250px;
     display: flex;
