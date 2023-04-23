@@ -4,7 +4,7 @@ import { useUser } from "../../hooks/useUser"
 import { supabase } from "../../client"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faStar, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 function ScoreBoard(){
@@ -185,6 +185,7 @@ function ScoreBoard(){
                                 return (
                                     <div key={starIndex + 'checkbox'}>
                                     <FontAwesomeIcon
+                                        className = "checkbox"
                                         style={{
                                         color: strike === true ? 'orange' : 'white',
                                         }}
@@ -204,6 +205,7 @@ function ScoreBoard(){
                                 return (
                                     <div key={starIndex + 'checkbox'}>
                                     <FontAwesomeIcon
+                                        className = "checkbox"
                                         style={{
                                         color: strike === true ? 'lightgreen' : 'white',
                                         }}
@@ -224,6 +226,7 @@ function ScoreBoard(){
             </div>
             
             <div className="scoreboard-btn">
+
                 <button onClick={handleOnClick}> + </button>
                 {/* <button onClick={handleSubmit}> Submit </button> */}
             </div>

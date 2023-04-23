@@ -59,6 +59,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     outline: solid 1px white;
+    font-weight: 800;
 }
 
 
@@ -68,4 +69,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+
+  
+
+  .checkbox{
+    cursor: pointer;
   }
