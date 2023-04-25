@@ -8,6 +8,9 @@ import TaskPage from './page/TaskPage/TaskPage';
 import AIAgent from './page/AIagent/AIAgent';
 import HabitPage from './page/HabitPage/HabitPage';
 import PrivateRoute from './PrivateRoute';
+import CommunityPage from './page/CommunityPage/CommunityPage';
+import NewPost from './page/NewPostPage/NewPost';
+import MyPost from './page/MyPostPage/MyPost';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -37,6 +40,34 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           </PrivateRoute>
         }
       />
+
+      <Route
+        path="/community"
+        element={
+          <PrivateRoute>
+            < CommunityPage/>
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/newpost"
+        element={
+          <PrivateRoute>
+            < NewPost/>
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/mypost"
+        element={
+          <PrivateRoute>
+            < MyPost/>
+          </PrivateRoute>
+        }
+      />
+
     </Routes>
   </BrowserRouter>
 );

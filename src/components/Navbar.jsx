@@ -24,6 +24,9 @@ function Navbar() {
             <Link to="/habit">Atomic Habits</Link>
         </li>
         <li>
+            <Link to="/community">Community</Link>
+        </li>
+        <li>
             <Link onClick={handleLogout} to="/">LogOut</Link>
         </li>
       </ul>

@@ -1,0 +1,48 @@
+.mypost-container {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1rem;
+  }
+  
+  .mypost-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .mypost-content {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .mypost-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .mypost-content p {
+    margin-bottom: 1rem;
+  }
+  
+  
+
+  .newcommunity-container{
+    display: flex;
+    /* align-items: flex-start; */
+    gap: 10px;    
+    flex-wrap: wrap;
+
+  }
+
+  .post-delete{
+    cursor: pointer;
+  }
+
+  .post-delete:hover{
+    color: lightcoral;
+  }

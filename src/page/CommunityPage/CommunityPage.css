@@ -1,0 +1,48 @@
+.community-container {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1rem;
+  }
+  
+  .post-container {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #fff;
+  }
+  
+  .post-container:hover {
+    border-color: #ccc;
+  }
+  
+  .post-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    
+  }
+  
+  .post-content {
+    line-height: 1.5;
+  }
+
+  
+  .link {
+    color: #fff;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .link:hover {
+    background: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  }
+
+  .page-title{
+    background: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
