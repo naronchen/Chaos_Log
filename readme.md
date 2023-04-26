@@ -17,7 +17,7 @@ GIF created with KAP
 
 ## Notes
 
-Better CSS needed !
+Better CSS needed ! A lot to complete!
 
 ## License
 
