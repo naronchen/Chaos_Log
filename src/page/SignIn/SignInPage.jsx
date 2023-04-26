@@ -85,7 +85,7 @@ function SignInPage() {
           <input
             type="email"
             className="gradient-input"
-            placeholder="email"
+            placeholder="email - use a fake one ㊙"  
             value={email}
             onChange={handleEmailChange}
             required
@@ -93,7 +93,7 @@ function SignInPage() {
         </label>
         <label  className="gradient-label">
           <input
-            placeholder="password"
+            placeholder="password - 6 char minimum"
             className="gradient-input"
             type="password"
             value={password}
