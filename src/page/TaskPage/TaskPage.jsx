@@ -65,7 +65,7 @@ function TaskPage() {
           console.log(error);
         } else {
           console.log('Task updated successfully:', data);
-          alert('🚀 Task updated successfully!'); // Show success message
+          // alert('🚀 Task updated successfully!'); // Show success message
           window.location.href = '/';
         }
       } catch (error) {
@@ -84,7 +84,7 @@ function TaskPage() {
           console.log(error)
         } else {
           console.log('Task deleted successfully')
-          alert('🗑️ Task deleted successfully!')
+          // alert('🗑️ Task deleted successfully!')
           window.location.href = '/'
         }
       } catch (error) {
