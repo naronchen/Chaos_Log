@@ -1,7 +1,7 @@
 # Chaos_Log
  Chaos Headquarter
  
-Deployed [Here](taupe-gnome-c16df5.netlify.app/), Just Sign up with a fake email.
+Deployed [Here](https://taupe-gnome-c16df5.netlify.app/), Just Sign up with a fake email.
 
 Methodology from Atomic Habits
 
