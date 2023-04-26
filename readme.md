@@ -7,8 +7,6 @@ Methodology from Atomic Habits
 
 This web app: **Methodology from Atomic Habits, Task Management Tool with AI Agent Implemented, Authorization Implemented, Connected to Supabase Database**
 
-## Required Features
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
