@@ -3,10 +3,12 @@ import Navbar from "../../components/Navbar";
 import MainContainer from "../../components/MainContainer";
 import { supabase } from "../../client";
 import { useUser } from "../../hooks/useUser";
+import { useNavigate } from "react-router-dom";
 import "./NewPost.css";
 
 function NewPost() {
   const userId = useUser();
+  const navigate = useNavigate();
   const [post, setPost] = useState({
     title: "",
     content: "",
@@ -37,7 +39,7 @@ function NewPost() {
         published: false,
       });
       // jump back to the community page
-      window.location.href = '/community';
+      navigate('/community');
     }
 
   };
