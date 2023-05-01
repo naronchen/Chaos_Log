@@ -23,6 +23,7 @@
     border-bottom: 1px solid white; /* Add underline */
     outline: none; /* Remove the default outline */
     background-color: transparent; /* Make the background transparent */
+    color: white;
   }
   
   .objective-input:focus {

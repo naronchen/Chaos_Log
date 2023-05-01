@@ -19,6 +19,8 @@
     background: transparent;
     border: none;
     border-bottom: 1px solid #fff;
+    color: white;
+
   }
   
   
@@ -30,6 +32,7 @@
     cursor: pointer;
     background: transparent;
     border: none;
+    color: white;
 
   }
   
