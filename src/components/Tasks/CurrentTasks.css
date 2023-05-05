@@ -10,18 +10,6 @@
     gap: 95px;
 }
 
-/* for some reason middle one is being squeezed */
-
-/* .task-sections li { */
-    
-    /* flex: 1; */
-    /* margin-right: 16px; Add margin between child sections */
-/* } */
-
-/* .the-section {
-    margin: 0 80px;
-} */
-
 .task-card {
     background-color: #e0e0e0; /* Use a default lighter background color */
     border-radius: 8px;
@@ -58,6 +46,6 @@
 
   }
 
-  #task-data {
+#task-data {
     width: 250px;
-  }
+}

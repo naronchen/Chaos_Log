@@ -1,13 +1,12 @@
 .new-task-container {
   width: 250px;
 }
+
 #new-task-form {
     /* Add styles for the form element */
     display: flex; /* Add flex display for aligning form items to left */
     flex-direction: column; /* Set flex-direction to column for vertical alignment */
     /* outline: auto; */
-
-
 }
 
 #new-task-form label {
@@ -55,14 +54,6 @@
   .btn-class{
     align-self: center;
   }
-  #submit-btn {
-    /* Add styles for the submit button */
-    width: 92px; /* Set width to 100% to fill the parent container */
-    padding: 10px; /* Add padding for spacing */
-    margin: 0px 5px;
-    color: rgba(255, 255, 255, 0.87);
-
-  }
 
   /* #submit-btn:hover {
     background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
@@ -78,10 +69,21 @@
     width: 250px;
     display: flex;
     justify-content: center;
+    /* background: red; */
   }
   .expand-btn{
     color: rgba(255, 255, 255, 0.87);
   }
   .expand-btn:focus {
     outline: none;
+  }
+
+
+  #submit-btn {
+    /* Add styles for the submit button */
+    width: 92px; /* Set width to 100% to fill the parent container */
+    padding: 10px; /* Add padding for spacing */
+    margin: 0px 5px;
+    color: rgba(255, 255, 255, 0.87);
+
   }
